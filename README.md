@@ -32,7 +32,7 @@ let data = Data(hex: "3132333435363738393031323334353637383930")!
 let totp = TOTP() // digits: Int = 6, algorithm: OTPAlgorithm = .sha1, timeInterval: TimeInterval = 30
 totp.generate(data: data, time: Date(timeIntervalSince1970: 0)) // "755224"
 
-/* OR */
+// OR
 let secret = "BASE32ENCODEDVALUE"
 totp.generate(secret: secret) // return TOTP code of Date()
 ```
